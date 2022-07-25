@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { LogsDedupStrategy, LogsMetaItem, LogsMetaKind, LogRowModel } from '@grafana/data';
-import { Button, Tooltip, Icon, LogLabels } from '@grafana/ui';
+import { Button, Tooltip, LogLabels } from '@grafana/ui';
 import { MAX_CHARACTERS } from '@grafana/ui/src/components/Logs/LogRowMessage';
 
 import { MetaInfoText, MetaItemProps } from './MetaInfoText';
@@ -78,7 +78,6 @@ export const LogsMetaRow: React.FC<Props> = React.memo(
           >
             <Button variant="secondary" size="sm" onClick={onEscapeNewlines}>
               <span>{forceEscape ? 'Remove escaping' : 'Escape newlines'}&nbsp;</span>
-              <Icon name="exclamation-triangle" size="sm" />
             </Button>
           </Tooltip>
         ),
